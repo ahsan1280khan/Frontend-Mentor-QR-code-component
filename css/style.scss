@@ -1,0 +1,79 @@
+$White: hsl(0, 0%, 100%);
+$Lightgray: hsl(212, 45%, 89%);
+$Grayishblue: hsl(220, 15%, 55%);
+$Darkblue: hsl(218, 44%, 22%);
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@mixin allcenter(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body{
+    background-color: $Lightgray;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    @include allcenter();
+}
+
+.hero{
+    background-color: $White;
+    height: 500px;
+    width: 325px;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 10px 10px 50px  rgba(0, 0, 0, 0.075);
+}
+
+.qrcode{
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+    overflow: hidden;
+    @include allcenter();
+    
+
+    img{
+        width: 100%;
+    }
+
+   
+}
+.detials{
+    text-align: center;
+    h2{
+        margin-top: 25px;
+        color: $Darkblue;
+    }
+
+    p{
+        margin-top: 12px;
+        color: $Grayishblue;
+    }
+}
+.attribution{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 13px;
+    color: $Grayishblue;
+    text-align: center;
+    
+    a{
+        text-decoration: none;
+        color: $Grayishblue;
+        border-bottom: 1px solid;
+    }
+}
